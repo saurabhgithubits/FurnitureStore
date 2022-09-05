@@ -1,0 +1,15 @@
+
+<div class="row text-center">
+    <div class="col-md-6 offset-md-2 mt-3">
+      <mat-card>
+      <h2>Stripe Checkout</h2>
+      <div class="text-center mt-5">
+        
+          <button (click)="pay()" (click)="enabled=true" class="btn btn-primary btn-block">Pay {{this.amount |currency:"INR"}}</button> <br><br>
+          <button mat-raised-button color="accent" (click)="ordering()" *ngIf="enabled">Confirm Order</button><br>
+          <small *ngIf="enabled">After Successfull Payment Confirm the Booking</small>
+      </div>
+     </mat-card>
+    </div>
+  </div>
+

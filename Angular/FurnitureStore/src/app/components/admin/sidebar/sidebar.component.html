@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-action-list>
+      <div mat-subheader>Menu</div>
+      
+      <button mat-list-item routerLink="/admin/profile">
+        <mat-icon mat-list-icon>account_circle</mat-icon> Profile
+      </button>
+      <button mat-list-item routerLink="/admin/products">
+        <mat-icon mat-list-icon>inventory_2</mat-icon> Products
+      </button>
+      <button mat-list-item routerLink="/admin/addProduct">
+        <mat-icon mat-list-icon>add_circle</mat-icon>Add Product
+      </button>
+      <button mat-list-item (click)="logout()" >
+        <mat-icon mat-list-icon>logout</mat-icon>Logout
+      </button>
+      <!-- <button mat-list-item routerLink="/admin/addRoom">
+        <mat-icon mat-list-icon>add_box</mat-icon>Add Room
+      </button>
+      <button mat-list-item routerLink="/admin/viewpayment">
+        <mat-icon mat-list-icon>currency_rupee</mat-icon> Payments
+      </button> -->
+    </mat-action-list>
+  </mat-card>

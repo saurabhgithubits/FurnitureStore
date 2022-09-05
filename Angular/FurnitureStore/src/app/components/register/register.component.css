@@ -1,0 +1,12 @@
+.row{
+    background-image: url(/assets/5.jpg);
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    width: 1200px;
+
+    height: 800px;
+
+}

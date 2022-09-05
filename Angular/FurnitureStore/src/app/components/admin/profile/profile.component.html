@@ -1,0 +1,41 @@
+<div class="row mt-5">
+    <div class="col-md-10 offset-md-1 ">
+     
+        <mat-card *ngIf="user" class="mt">
+          <mat-card>
+          <div class="text-center">
+            <h1>Your Profile Details</h1>
+          </div>
+         </mat-card>
+          <div class="text-center mt-3">
+          <h1>{{user.firstName}} {{user.lastName}}</h1>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-4 offset-md-2">
+          
+             <p>Username:</p>
+             <p>Phone   :</p>
+             <p>Email   :</p>
+             <p>Address :</p>
+             <p>Status  :</p>
+  
+            </div>
+          
+            <div class="col-md-4 offset-md-2">
+              <p>{{user.username}}</p>
+              <p>{{user.mobile}}</p>
+              <p>{{user.email}}</p>
+              <p>{{user.address}}</p>
+              <p>{{ user.enabled ? "ACTIVE" : "NOTACTIVE" }}</p>
+              
+            </div>
+          </div>
+      
+          <mat-card-actions class="text-center mt-2 mb-3">
+            <button mat-raised-button color="primary" (click)="editUser(this.user)">UPDATE</button>
+          </mat-card-actions>
+        </mat-card>
+      
+     </div>
+  </div>
+    

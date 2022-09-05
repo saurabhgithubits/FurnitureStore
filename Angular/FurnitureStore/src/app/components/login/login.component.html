@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row" >
+        <div class="col-md-6 offset-md-3">
+            <div class="container text-center">
+                <img src="favicon.ico" width="200px" height="200px" alt="">
+            </div>
+            <h1 class="text-center">Login</h1>
+            
+            <form #userForm="ngForm" (ngSubmit)="formSubmit()" >
+
+                <div class="form-group">
+                  <label for=""><b>Username</b></label>
+                  <input type="text"  required #username="ngModel" 
+                  [class.is-invalid]="username.invalid && username.touched" class="form-control" name="username" [(ngModel)]="loginData.username">
+                   <small class="text-danger" [class.d-none]="username.valid || username.untouched" >Username is required</small>   
+                 </div> 
+
+                 <div class="form-group mb-2">
+                    <label for=""><b>Password</b></label>
+                    <input type="password"  required #password="ngModel" 
+                    [class.is-invalid]="password.invalid && password.touched" class="form-control" name="password" [(ngModel)]="loginData.password">
+                     <small class="text-danger" [class.d-none]="password.valid || password.untouched" >Password is required</small>   
+                 </div> 
+                <div class="text-center mt-3">
+                  <button [disabled]="userForm.form.invalid" class="btn btn-primary" type="submit">Login</button>
+                  <a href=""  style="margin-left: 10px;"><button  class="btn btn-primary" routerLink="/register">Sign Up</button></a>
+                </div> 
+            </form>
+        </div>
+    </div>
+</div>
